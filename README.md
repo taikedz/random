@@ -8,7 +8,8 @@ Chooses a random item from any of the supplied tokens, and lines from stdin ; an
 $> random one two three
 # any of one, two, or three
 
-$> echo -e "alpha\nbeta\ngamma" | random one two three
+# Use `-` to specify to read from stdin
+$> echo -e "alpha\nbeta\ngamma" | random one two three -
 # any of alpha, beta, gamma, one, two, or three
 ```
 
