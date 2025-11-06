@@ -29,8 +29,9 @@ func loadargs() []string {
 	    if token == "-" {
                 if seen_stdin { continue }
 		seen_stdin = true
-                all_terms, err := readLines()
+                items, err := readLines()
                 if err != nil { fail(1, err) }
+		all_terms = append(all_terms, items...)
 	    } else {
                 all_terms = append(all_terms, token)
             }
